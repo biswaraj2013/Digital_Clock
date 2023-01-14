@@ -1,0 +1,60 @@
+html {
+  /* background: linear-gradient(130deg, rgb(225, 255, 54), rgb(0, 192, 226), rgb(60, 26, 252), rgb(221, 63, 221), rgba(141, 98, 17, 0.795)); */
+  background: linear-gradient(120deg, black, rgb(73, 73, 73));
+  animation: bgAni 1.2s linear infinite;
+}
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
+@keyframes bgAni {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.container {
+  width: 24rem;
+  height: 12rem;
+  background: linear-gradient(130deg, #14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  inset: -0.82em;
+  background: linear-gradient(to bottom right, #14ffe9, #ffeb3b, #ff00e0);
+  filter: blur(2.5em);
+  z-index: -1;
+}
+
+.container .display {
+  width: 22rem;
+  height: 10rem;
+  background-color: rgb(41, 41, 41);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.container .display #time {  
+  font-size: 3rem;
+  color: #12ee66;
+  font-weight: 800;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container .display #date { 
+  z-index: 1;
+  font-size: 1.5rem;
+  color: #12ee66;
+  font-weight: 800;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
