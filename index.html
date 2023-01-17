@@ -66,22 +66,9 @@ body {
   font-weight: 800;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-/* ========================================================================================== */
-
-   </style>  
-</head>
-<body>
-    <div class="container"">
-        <div class="display">
-            <div id="time">12:00:00 PM</div>
-            <div id="date">14th January, 2023</div>
-        </div>
-    </div>
-
-   <script>
-  
-/* ========================================================================================== */
+   </style>
+    
+    <script> 
 setInterval(() => {
   const date = new Date();
   let hours = date.getHours();
@@ -155,5 +142,16 @@ setInterval(() => {
   DAY.textContent = getDate()+" "+getMonth()+", "+getYear()
 }, 1000);
    </script>
+</head>
+<body>
+    /* ========================================================================================== */
+    <div class="container"">
+        <div class="display">
+            <div id="time">12:00:00 PM</div>
+            <div id="date">14th January, 2023</div>
+        </div>
+    </div>
+/* ========================================================================================== */
+   
 </body>
 </html>
